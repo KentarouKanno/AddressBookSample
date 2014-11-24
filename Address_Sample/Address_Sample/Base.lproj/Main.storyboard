@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ztt-ff-w9I">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Address Book Sample-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-ei-rTa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jrW-hY-1Fo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FMH-Qh-JP9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z8c-ei-rTa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Va-j3-pcr"/>
+                            <constraint firstAttribute="trailing" secondItem="z8c-ei-rTa" secondAttribute="trailing" id="Sga-RJ-fqW"/>
+                            <constraint firstItem="z8c-ei-rTa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="grk-4J-UND"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z8c-ei-rTa" secondAttribute="bottom" id="wSP-nQ-SEm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Address Book Sample" id="8L5-wb-h7U">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="iFt-vZ-8N7">
+                            <connections>
+                                <action selector="editAddress:" destination="BYZ-38-t0r" id="oNq-Ch-fUJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Picker" id="Qev-fO-tOl">
+                            <connections>
+                                <action selector="openPeoplePicker:" destination="BYZ-38-t0r" id="t4D-Uz-jYt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTable" destination="z8c-ei-rTa" id="BBJ-LQ-lNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f4u-Tb-t1M">
+            <objects>
+                <navigationController id="Ztt-ff-w9I" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fA9-LH-xWN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tbA-OC-xFA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prU-e9-3FI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="357"/>
+        </scene>
+    </scenes>
+</document>
